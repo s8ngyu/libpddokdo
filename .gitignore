@@ -1,0 +1,4 @@
+/.theos
+obj
+.DS_Store
+/packages
