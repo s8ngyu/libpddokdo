@@ -20,6 +20,23 @@
     [self.weatherWidget _updateTodayView];
 }
 
+-(NSDictionary *)weatherData {
+    [self initWeatherWidget];
+ 
+    NSDictionary *weatherData = nil;
+    NSString *temperature = self.weatherWidget._temperature;
+    NSString *condition = self.weatherWidget._conditionsLine;
+    NSString *location = self.weatherWidget._locationName;
+    UIImage *conditionsImage = self.weatherWidget._conditionsImage;
+ 
+    weatherData = @{ @"temperature" : temperature,
+                    @"condition" : condition,
+                    @"location" : location,
+                    @"conditionsImage" : conditionsImage};
+ 
+    return weatherData;
+}
+
 -(NSString *)getCurrentTemperature {
     [self initWeatherWidget];
     NSString *temperature = self.weatherWidget._temperature;

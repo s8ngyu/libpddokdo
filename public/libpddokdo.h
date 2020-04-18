@@ -3,4 +3,5 @@
 -(NSString *)getCurrentConditions;
 -(NSString *)getCurrentLocation;
 -(UIImage *)getCurrentConditionsInImage;
+-(NSDictionary *)weatherData;
 @end
