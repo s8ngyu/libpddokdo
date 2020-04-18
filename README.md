@@ -13,6 +13,7 @@ For more information, visit [https://dokdo.mofa.go.kr/eng/]
 -(NSString *)getCurrentConditions;
 -(NSString *)getCurrentLocation;
 -(UIImage *)getCurrentConditionsInImage;
+-(NSDictionary *)weatherData;
 @end
 ```
 
@@ -31,6 +32,19 @@ Here is step by step guide how to use it on your project:
 5. Open control and add it as a dependency. `Depends: com.peterdev.libpddokdo`
 6. Open Tweak.x(m) or wherever you want to use this library and add `#import <PeterDev/libpddokdo.h>` at the top of the source code to import libpddokdo.
 7. Done. Follow below to learn how to get those values from libpddokdo.
+
+## To get multiple values at once.
+If you are going to get multiple values at once, **USE this method instead of methods below.**
+As you can see the method above, `-(NSDictionary *)weatherData;` returns NSDictionary value.
+```objc
+//Example code
+NSDictionary *weatherData = [[PDDokdo alloc] weatherData];
+
+NSString *temperature = [weatherData objectForKey:@"temperature"];
+NSString *condition = [weatherData objectForKey:@"condition"];
+NSString *location = [weatherData objectForKey:@"location"];
+UIImage *conditionsInImage = [weatherData objectForKey:@"conditionsImage"];
+```
 
 ## How to get current temperature.
 As you can see the method above, `-(NSString *)getCurrentTemperature;` returns NSString value.
