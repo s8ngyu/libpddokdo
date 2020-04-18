@@ -50,9 +50,9 @@
 
 -(NSDictionary *)weatherData {
 	NSMutableDictionary *data = [NSMutableDictionary dictionary];
-	[data setObject:self.currentTemperature forKey:@"temperate"];
-	[data setObject:self.currentConditions forKey:@"conditions"];
-	[data setObject:self.currentLocation forKey:@"location"];
+	if (self.currentTemperature) [data setObject:self.currentTemperature forKey:@"temperate"]; else [data setObject:@"N/A" forKey:@"temperate"];
+	if (self.currentConditions) [data setObject:self.currentConditions forKey:@"conditions"]; else [data setObject:@"N/A" forKey:@"conditions"];
+	if (self.currentLocation) [data setObject:self.currentLocation forKey:@"location"]; else [data setObject:@"N/A" forKey:@"location"];
 	UIImage *currentConditionsImage = self.currentConditionsImage;
 	if (currentConditionsImage) {
 		[data setObject:currentConditionsImage forKey:@"conditionsImage"];
