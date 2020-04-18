@@ -1,7 +1,13 @@
 #import "public/libpddokdo.h"
 #import <objc/runtime.h>
 
+@interface WAForecastModel : NSObject
+-(NSDate *)sunrise;
+-(NSDate *)sunset;
+@end
+
 @interface WALockscreenWidgetViewController : UIViewController
+-(WAForecastModel *)currentForecastModel;
 -(id)_temperature;
 -(id)_conditionsLine;
 -(id)_locationName;
@@ -19,6 +25,8 @@
 @dynamic currentConditions;
 @dynamic currentLocation;
 @dynamic currentConditionsImage;
+@dynamic sunrise;
+@dynamic sunset;
 @dynamic weatherData;
 @synthesize weatherWidget = _weatherWidget;
 
@@ -53,6 +61,8 @@
 	if (self.currentTemperature) [data setObject:self.currentTemperature forKey:@"temperate"]; else [data setObject:@"N/A" forKey:@"temperate"];
 	if (self.currentConditions) [data setObject:self.currentConditions forKey:@"conditions"]; else [data setObject:@"N/A" forKey:@"conditions"];
 	if (self.currentLocation) [data setObject:self.currentLocation forKey:@"location"]; else [data setObject:@"N/A" forKey:@"location"];
+	if (self.sunrise) [data setObject:self.sunrise forKey:@"sunrise"];
+	if (self.sunset) [data setObject:self.sunset forKey:@"sunset"];
 	UIImage *currentConditionsImage = self.currentConditionsImage;
 	if (currentConditionsImage) {
 		[data setObject:currentConditionsImage forKey:@"conditionsImage"];
@@ -84,6 +94,24 @@
 -(UIImage *)currentConditionsImage {
 	if ([self.weatherWidget respondsToSelector:@selector(_conditionsImage)]) {
 		return [self.weatherWidget _conditionsImage];
+	}
+	return NULL;
+}
+
+-(NSDate *)sunrise {
+	if ([self.weatherWidget respondsToSelector:@selector(currentForecastModel)]) {
+		if([self.weatherWidget currentForecastModel]) {
+			return [[self.weatherWidget currentForecastModel] sunrise];
+		}
+	}
+	return NULL;
+}
+
+-(NSDate *)sunset {
+	if ([self.weatherWidget respondsToSelector:@selector(currentForecastModel)]) {
+		if([self.weatherWidget currentForecastModel]) {
+			return [[self.weatherWidget currentForecastModel] sunset];
+		}
 	}
 	return NULL;
 }
