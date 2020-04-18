@@ -9,11 +9,13 @@ For more information, visit [https://dokdo.mofa.go.kr/eng/]
 ## Methods
 ```objc
 @interface PDDokdo : NSObject
--(NSString *)getCurrentTemperature;
--(NSString *)getCurrentConditions;
--(NSString *)getCurrentLocation;
--(UIImage *)getCurrentConditionsInImage;
--(NSDictionary *)weatherData;
++ (instancetype)sharedInstance;
+@property (nonatomic, copy, readonly) NSString *currentTemperature;
+@property (nonatomic, copy, readonly) NSString *currentConditions;
+@property (nonatomic, copy, readonly) NSString *currentLocation;
+@property (nonatomic, strong, readonly) UIImage *currentConditionsImage;
+@property (nonatomic, strong, readonly) NSDictionary *weatherData;
+- (void)refreshWeatherData;
 @end
 ```
 
@@ -35,10 +37,12 @@ Here is step by step guide how to use it on your project:
 
 ## To get multiple values at once.
 If you are going to get multiple values at once, **USE this method instead of methods below.**
-As you can see the method above, `-(NSDictionary *)weatherData;` returns NSDictionary value.
+As you can see the property above, `@property (nonatomic, strong, readonly) NSDictionary *weatherData;` is a NSDictionary.
+And you need to refresh weather data.
 ```objc
 //Example code
-NSDictionary *weatherData = [[PDDokdo alloc] weatherData];
+[[PDDokdo sharedInstance] refreshWeatherData];
+NSDictionary *weatherData = [[PDDokdo sharedInstance] weatherData];
 
 NSString *temperature = [weatherData objectForKey:@"temperature"];
 NSString *condition = [weatherData objectForKey:@"condition"];
@@ -47,33 +51,41 @@ UIImage *conditionsInImage = [weatherData objectForKey:@"conditionsImage"];
 ```
 
 ## How to get current temperature.
-As you can see the method above, `-(NSString *)getCurrentTemperature;` returns NSString value.
+As you can see the property above, `@property (nonatomic, copy, readonly) NSString *currentTemperature;` is a NSString.
+And you need to refresh weather data.
 ```objc
 //Example code
-NSString *temperature = [[PDDokdo alloc] getCurrentTemperature];
+[[PDDokdo sharedInstance] refreshWeatherData];
+NSString *temperature = [[PDDokdo sharedInstance] currentTemperature];
 ```
 
-## How to get current temperature.
-As you can see the method above, `-(NSString *)getCurrentConditions;` returns NSString value.
+## How to get current conditions.
+As you can see the property above, `@property (nonatomic, copy, readonly) NSString *currentConditions;` is a NSString.
+And you need to refresh weather data.
 ```objc
 //Example code
-NSString *conditions = [[PDDokdo alloc] getCurrentConditions];
+[[PDDokdo sharedInstance] refreshWeatherData];
+NSString *conditions = [[PDDokdo sharedInstance] currentConditions];
 ```
 
-## How to get current temperature.
-As you can see the method above, `-(NSString *)getCurrentLocation;` returns NSString value.
+## How to get current location.
+As you can see the property above, `@property (nonatomic, copy, readonly) NSString *currentLocation;` is a NSString.
+And you need to refresh weather data.
 ```objc
 //Example code
-NSString *location = [[PDDokdo alloc] getCurrentLocation];
+[[PDDokdo sharedInstance] refreshWeatherData];
+NSString *location = [[PDDokdo sharedInstance] currentLocation];
 ```
 
-## How to get current temperature.
-As you can see the method above, `-(NSString *)getCurrentConditionsInImage;` returns NSString value.
+## How to get current conditionsImage.
+As you can see the property above, `@property (nonatomic, strong, readonly) UIImage *currentConditionsImage;` is an UIImage.
+And you need to refresh weather data.
 ```objc
 //Example code
-UIImage *conditionsInImage = [[PDDokdo alloc] getCurrentConditionsInImage];
+[[PDDokdo sharedInstance] refreshWeatherData];
+UIImage *conditionsImage = [[PDDokdo sharedInstance] currentConditionsImage];
 ```
 
 
 ## Special Thanks To
-Special thanks to UBIK(@HiMyNameIsUbik) and Appie(@Baw_Appie) for helping me to make this library.
+Special thanks to UBIK(@HiMyNameIsUbik), Appie(@Baw_Appie) and Janosch Hübner(@sharedRoutine) for helping me to make this library.
