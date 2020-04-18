@@ -27,13 +27,19 @@ For more information, visit [https://dokdo.mofa.go.kr/eng/]
 
 ## How can I use it on my project?
 Here is step by step guide how to use it on your project:
-1. Clone or Download this repository on your computer.
+1. Clone or download this repository on your computer.
 2. run `make clean stage`. This will install libpddokdo on your computer.
 3. run `make do THEOS_DEVICE_IP=(your device ip)`. This will install libpddokdo on your iOS device.
 4. Now, go to your project and open Makefile and add pddokdo, `$(TWEAK_NAME)_LIBRARIES += pddokdo`
 5. Open control and add it as a dependency. `Depends: com.peterdev.libpddokdo`
 6. Open Tweak.x(m) or wherever you want to use this library and add `#import <PeterDev/libpddokdo.h>` at the top of the source code to import libpddokdo.
 7. Done. Follow below to learn how to get those values from libpddokdo.
+
+## How to update libPDDokdo.
+1. Clone or download this repository on your computer.
+2. run `make clean stage`. This will install libpodokdo on your computer.
+3. run `make do THEOS_DEVICE_IP=(your device ip)`. This will install libpddokdo on your iOS device.
+4. Done. Check if documentation of libPDDokdo has been changed, and update your tweak.
 
 ## To get multiple values at once.
 If you are going to get multiple values at once, **USE this method instead of methods below.**
