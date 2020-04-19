@@ -51,7 +51,7 @@ And you need to refresh weather data.
 NSDictionary *weatherData = [[PDDokdo sharedInstance] weatherData];
 
 NSString *temperature = [weatherData objectForKey:@"temperature"];
-NSString *condition = [weatherData objectForKey:@"condition"];
+NSString *condition = [weatherData objectForKey:@"conditions"];
 NSString *location = [weatherData objectForKey:@"location"];
 UIImage *conditionsInImage = [weatherData objectForKey:@"conditionsImage"];
 ```
