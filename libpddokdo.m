@@ -61,8 +61,8 @@
 	if (self.currentTemperature) [data setObject:self.currentTemperature forKey:@"temperature"]; else [data setObject:@"N/A" forKey:@"temperature"];
 	if (self.currentConditions) [data setObject:self.currentConditions forKey:@"conditions"]; else [data setObject:@"N/A" forKey:@"conditions"];
 	if (self.currentLocation) [data setObject:self.currentLocation forKey:@"location"]; else [data setObject:@"N/A" forKey:@"location"];
-	if (self.sunrise) [data setObject:self.sunrise forKey:@"sunrise"];
-	if (self.sunset) [data setObject:self.sunset forKey:@"sunset"];
+	if (self.sunrise) [data setObject:self.sunrise forKey:@"sunrise"]; else [data setObject:@"N/A" forKey:@"sunrise"];
+	if (self.sunset) [data setObject:self.sunset forKey:@"sunset"]; else [data setObject:@"N/A" forKey:@"sunset"];
 	UIImage *currentConditionsImage = self.currentConditionsImage;
 	if (currentConditionsImage) {
 		[data setObject:currentConditionsImage forKey:@"conditionsImage"];
