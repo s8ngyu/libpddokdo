@@ -94,4 +94,6 @@ UIImage *conditionsImage = [[PDDokdo sharedInstance] currentConditionsImage];
 
 
 ## Special Thanks To
-Special thanks to UBIK(@HiMyNameIsUbik), Appie(@Baw_Appie) and Janosch Hübner(@sharedRoutine) for helping me to make this library.
+Special thanks to UBIK(@HiMyNameIsUbik) and Appie(@Baw_Appie) for helping me to make this library.
+
+Thanks to Janosch Hübner(@sharedRoutine) and John Zarogiannis(@johnzaro) for PRs.
