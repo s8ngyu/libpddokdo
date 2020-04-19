@@ -1,6 +1,6 @@
 Package: com.peterdev.libpddokdo
 Name: libPDDokdo
-Version: 1.2
+Version: 1.2.1
 Architecture: iphoneos-arm
 Description: An awesome library to get current weather which provides by iOS Weater.app easily.
 Maintainer: Soongyu Kwon
