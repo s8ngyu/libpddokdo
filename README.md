@@ -14,6 +14,8 @@ For more information, visit [https://dokdo.mofa.go.kr/eng/]
 @property (nonatomic, copy, readonly) NSString *currentConditions;
 @property (nonatomic, copy, readonly) NSString *currentLocation;
 @property (nonatomic, strong, readonly) UIImage *currentConditionsImage;
+@property(nonatomic, strong, readonly) NSDate *sunrise;
+@property(nonatomic, strong, readonly) NSDate *sunset;
 @property (nonatomic, strong, readonly) NSDictionary *weatherData;
 - (void)refreshWeatherData;
 @end
@@ -24,6 +26,8 @@ For more information, visit [https://dokdo.mofa.go.kr/eng/]
 - Current Conditions (ex. Mostly Cloudy)
 - Current Location (ex. Gwanak-gu)
 - Current Conditions In Image
+- Today's sunrise time
+- Today's sunset time
 
 ## How can I use it on my project?
 Here is step by step guide how to use it on your project:
@@ -53,7 +57,9 @@ NSDictionary *weatherData = [[PDDokdo sharedInstance] weatherData];
 NSString *temperature = [weatherData objectForKey:@"temperature"];
 NSString *condition = [weatherData objectForKey:@"conditions"];
 NSString *location = [weatherData objectForKey:@"location"];
-UIImage *conditionsInImage = [weatherData objectForKey:@"conditionsImage"];
+UIImage *conditionsImage = [weatherData objectForKey:@"conditionsImage"];
+NSDate *sunrise = [weatherData objectForKey:@"sunrise"];
+NSDate *sunset = [weatherData objectForKey:@"sunset"];
 ```
 
 ## How to get current temperature.
@@ -83,13 +89,31 @@ And you need to refresh weather data.
 NSString *location = [[PDDokdo sharedInstance] currentLocation];
 ```
 
-## How to get current conditionsImage.
+## How to get current conditions image.
 As you can see the property above, `@property (nonatomic, strong, readonly) UIImage *currentConditionsImage;` is an UIImage.
 And you need to refresh weather data.
 ```objc
 //Example code
 [[PDDokdo sharedInstance] refreshWeatherData];
 UIImage *conditionsImage = [[PDDokdo sharedInstance] currentConditionsImage];
+```
+
+## How to get today's sunrise time.
+As you can see the property above, `@property(nonatomic, strong, readonly) NSDate *sunrise;` is a NSDate.
+And you need to refresh weather data.
+```objc
+//Example code
+[[PDDokdo sharedInstance] refreshWeatherData];
+NSDate *sunrise = [[PDDokdo sharedInstance] sunrise];
+```
+
+## How to get today's sunset time.
+As you can see the property above, `@property(nonatomic, strong, readonly) NSDate *sunset;` is a NSDate.
+And you need to refresh weather data.
+```objc
+//Example code
+[[PDDokdo sharedInstance] refreshWeatherData];
+NSDate *sunset = [[PDDokdo sharedInstance] sunset];
 ```
 
 
