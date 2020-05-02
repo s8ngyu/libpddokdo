@@ -1,6 +1,7 @@
 ## libpddokdo (libPDDokdo)
 This is a library to get weather which provides by iOS Weather.app easily for jailbroken devices.
 **This library is only for 64-bit deivces. and will be available to download on Packix.**
+*PRs are appreciated!*
 
 ## What is Dokdo?
 Dokdo is a beautiful island in the east sea of Republic of Korea(South Korea).
