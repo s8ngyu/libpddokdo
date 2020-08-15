@@ -100,7 +100,7 @@
 
 -(NSDate *)sunrise {
 	if ([self.weatherWidget respondsToSelector:@selector(currentForecastModel)]) {
-		if([self.weatherWidget currentForecastModel]) {
+		if ([self.weatherWidget currentForecastModel]) {
 			return [[self.weatherWidget currentForecastModel] sunrise];
 		}
 	}
@@ -109,7 +109,7 @@
 
 -(NSDate *)sunset {
 	if ([self.weatherWidget respondsToSelector:@selector(currentForecastModel)]) {
-		if([self.weatherWidget currentForecastModel]) {
+		if ([self.weatherWidget currentForecastModel]) {
 			return [[self.weatherWidget currentForecastModel] sunset];
 		}
 	}
