@@ -10,4 +10,7 @@
 @property(nonatomic, strong, readonly) NSDate *sunset;
 @property (nonatomic, strong, readonly) NSDictionary *weatherData;
 - (void)refreshWeatherData;
+
+-(NSString *)highestTemperatureIn:(int)type;
+-(NSString *)lowestTemperatureIn:(int)type;
 @end

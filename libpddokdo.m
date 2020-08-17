@@ -1,9 +1,25 @@
 #import "public/libpddokdo.h"
 #import <objc/runtime.h>
 
+@interface WFTemperature : NSObject
+@property (assign,nonatomic) double celsius;
+@property (assign,nonatomic) double fahrenheit;
+@property (assign,nonatomic) double kelvin;
+@end
+
+@interface WADayForecast : NSObject
+@property (nonatomic,copy) WFTemperature * high;
+@property (nonatomic,copy) WFTemperature * low;
+@end
+
+@interface WACurrentForecast : NSObject
+-(WFTemperature *)feelsLike;
+@end
+
 @interface WAForecastModel : NSObject
 -(NSDate *)sunrise;
 -(NSDate *)sunset;
+-(NSArray *)dailyForecasts;
 @end
 
 @interface WALockscreenWidgetViewController : UIViewController
@@ -111,6 +127,52 @@
 	if ([self.weatherWidget respondsToSelector:@selector(currentForecastModel)]) {
 		if ([self.weatherWidget currentForecastModel]) {
 			return [[self.weatherWidget currentForecastModel] sunset];
+		}
+	}
+	return NULL;
+}
+
+-(NSString *)highestTemperatureIn:(int)type {
+	/*
+		0: celsius
+		1: fahrenheit
+		2: kelvin
+	*/
+	if ([self.weatherWidget respondsToSelector:@selector(currentForecastModel)]) {
+		if ([self.weatherWidget currentForecastModel]) {
+			WADayForecast *dailyForecast = [[self.weatherWidget currentForecastModel] dailyForecasts][0];
+			if (type == 0) {
+				return [NSString stringWithFormat:@"%.0f°", dailyForecast.high.celsius];
+			} else if (type == 1) {
+				return [NSString stringWithFormat:@"%.0f°", dailyForecast.high.fahrenheit];
+			} else if (type == 2) {
+				return [NSString stringWithFormat:@"%.0f°", dailyForecast.high.kelvin];
+			} else {
+				return @"BAD TYPE";
+			}
+		}
+	}
+	return NULL;
+}
+
+-(NSString *)lowestTemperatureIn:(int)type {
+	/*
+		0: celsius
+		1: fahrenheit
+		2: kelvin
+	*/
+	if ([self.weatherWidget respondsToSelector:@selector(currentForecastModel)]) {
+		if ([self.weatherWidget currentForecastModel]) {
+			WADayForecast *dailyForecast = [[self.weatherWidget currentForecastModel] dailyForecasts][0];
+			if (type == 0) {
+				return [NSString stringWithFormat:@"%.0f°", dailyForecast.low.celsius];
+			} else if (type == 1) {
+				return [NSString stringWithFormat:@"%.0f°", dailyForecast.low.fahrenheit];
+			} else if (type == 2) {
+				return [NSString stringWithFormat:@"%.0f°", dailyForecast.low.kelvin];
+			} else {
+				return @"BAD TYPE";
+			}
 		}
 	}
 	return NULL;
