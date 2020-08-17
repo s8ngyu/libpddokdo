@@ -18,7 +18,9 @@ For more information, visit [https://dokdo.mofa.go.kr/eng/]
 @property(nonatomic, strong, readonly) NSDate *sunrise;
 @property(nonatomic, strong, readonly) NSDate *sunset;
 @property (nonatomic, strong, readonly) NSDictionary *weatherData;
-- (void)refreshWeatherData;
+-(void)refreshWeatherData;
+-(NSString *)highestTemperatureIn:(int)type;
+-(NSString *)lowestTemperatureIn:(int)type;
 @end
 ```
 
@@ -29,6 +31,8 @@ For more information, visit [https://dokdo.mofa.go.kr/eng/]
 - Current Conditions In Image
 - Today's sunrise time
 - Today's sunset time
+- Today's high temperature (ex. 24°)
+= Today's low temperature (ex. 10°)
 
 ## How can I use it on my project?
 Here is step by step guide how to use it on your project:
@@ -117,6 +121,35 @@ And you need to refresh weather data.
 NSDate *sunset = [[PDDokdo sharedInstance] sunset];
 ```
 
+## How to get today's high temperature.
+As you can see the method above, `-(NSString *)highestTemperatureIn:(int)type;` returns a NSString.
+And you need to refresh weather data.
+
+**types**
+- 0: celsius
+- 1: fahrenheit
+- 2: kelvin
+
+```objc
+//Example code
+[[PDDokdo sharedInstance] refreshWeatherData];
+NSString *highTemperature = [[PDDokdo sharedInstance] highestTemperatureIn:0];
+```
+
+## How to get today's low temperature.
+As you can see the method above, `-(NSString *)lowestTemperatureIn:(int)type;` returns a NSString.
+And you need to refresh weather data.
+
+**types**
+- 0: celsius
+- 1: fahrenheit
+- 2: kelvin
+
+```objc
+//Example code
+[[PDDokdo sharedInstance] refreshWeatherData];
+NSString *lowTemperature = [[PDDokdo sharedInstance] lowestTemperatureIn:0];
+```
 
 ## Special Thanks To
 Special thanks to UBIK(@HiMyNameIsUbik) and Appie(@Baw_Appie) for helping me to make this library.
