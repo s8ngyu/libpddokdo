@@ -1,3 +1,4 @@
+#include <UIKit/UIKit.h>
 @class UIImage;
 
 @interface PDDokdo : NSObject
