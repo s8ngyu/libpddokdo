@@ -9,8 +9,8 @@ libpddokdo_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/library.mk
 
-before-stage::
-	find . -name ".DS\_Store" -delete
+# before-stage::
+#	find . -name ".DS\_Store" -delete
 
 stage::
 	mkdir -p $(THEOS)/include/PeterDev
