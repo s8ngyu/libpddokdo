@@ -2,3 +2,4 @@
 obj
 .DS_Store
 /packages
+/.vscode
