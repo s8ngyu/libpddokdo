@@ -1,0 +1,76 @@
+make: Entering directory `/Users/soongyukwon/Documents/Github.nosync/libpddokdo'
+printf "\e[0;36m==> \e[1;36mNotice:\e[m %s\n" "Build may be slow as Theos isn’t using all available CPU cores on this computer. Consider upgrading GNU Make: https://theos.dev/docs/parallel-building"
+ 
+mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos
+\
+abs_build_dir=.; \
+if [[ "" != "" ]]; then \
+  printf "\e[1;31m> \e[1;3;39m%s…\e[m\n" "Making all in subprojects of library libpddokdo"; \
+  for d in ; do \
+    d="${d%:*}"; \
+    if [[ "${abs_build_dir}" = "." ]]; then \
+      lbuilddir="."; \
+    else \
+      lbuilddir="${abs_build_dir}/$d"; \
+    fi; \
+    if /Applications/Xcode.app/Contents/Developer/usr/bin/make -C $d -f Makefile --no-keep-going COLOR=1 --no-print-directory all \
+        THEOS_BUILD_DIR="$lbuilddir" \
+       ; then\
+       :; \
+    else exit $?; \
+    fi; \
+  done; \
+ fi; \
+printf "\e[1;31m> \e[1;3;39m%s…\e[m\n" "Making all for library libpddokdo"; \
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile --no-keep-going COLOR=1 --no-print-directory \
+	internal-library-all \
+	_THEOS_CURRENT_TYPE="library" \
+	THEOS_CURRENT_INSTANCE="libpddokdo" \
+	_THEOS_CURRENT_OPERATION="all" \
+	THEOS_BUILD_DIR="."
+ 
+[1;31m> [1;3;39mMaking all for library libpddokdo…[m
+ 
+for i in libpddokdo.m; do \
+		if [[ ! -f "$i" ]]; then \
+			printf "\e[0;31m==> \e[1;31mError:\e[m %s\n" "File $i does not exist."  >&2; exit 1; \
+		fi; \
+	done
+mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug
+mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/; touch /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/.stamp
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile --no-keep-going COLOR=1 --no-print-directory \
+		internal-library-compile \
+		_THEOS_CURRENT_TYPE=library THEOS_CURRENT_INSTANCE=libpddokdo _THEOS_CURRENT_OPERATION=compile \
+		THEOS_BUILD_DIR="." _THEOS_MAKE_PARALLEL=yes
+ 
+mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile --no-print-directory --no-keep-going internal-library-compile _THEOS_CURRENT_TYPE="library" THEOS_CURRENT_INSTANCE="libpddokdo" _THEOS_CURRENT_OPERATION="compile" THEOS_BUILD_DIR="." THEOS_CURRENT_ARCH="arm64"
+ 
+(mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64/)
+(printf "\e[0;3%im==> \e[1;39m%s…\e[m\n" 2 "Compiling libpddokdo.m (arm64)"); set -o pipefail; (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -x objective-c -c -I/Users/soongyukwon/theos/include -I/Users/soongyukwon/theos/vendor/include -I/Users/soongyukwon/theos/include/_fallback -include /Users/soongyukwon/theos/Prefix.pch -MT /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64/libpddokdo.m.d0dfda25.o -MMD -MP -MF "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64/libpddokdo.m.d0dfda25.Td" -fcolor-diagnostics -DTARGET_IPHONE=1 -O0 -Wall -ggdb -Werror  -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk" -target arm64-apple-ios15.5   -fobjc-arc -DDEBUG -O0  -DTHEOS_INSTANCE_NAME="\"libpddokdo\"" -fmodules -fcxx-modules -fmodule-name=libpddokdo -fbuild-session-file=/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/build_session -fmodules-prune-after=345600 -fmodules-prune-interval=86400 -fmodules-validate-once-per-build-session  -arch arm64      libpddokdo.m -o /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64/libpddokdo.m.d0dfda25.o)
+ 
+(mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64)
+ 
+(printf "\e[0;3%im==> \e[1;39m%s…\e[m\n" 3 "Linking library libpddokdo (arm64)"); set -o pipefail; (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -fcolor-diagnostics -L/Users/soongyukwon/theos/lib -ggdb -L/Users/soongyukwon/theos/vendor/lib -lobjc -framework Foundation -framework CoreFoundation              -dynamiclib -install_name "/usr/lib/libpddokdo.dylib"  -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk" -target arm64-apple-ios15.5  -multiply_defined suppress -stdlib=libc++ -lc++  -arch arm64  -O0 -o "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64/libpddokdo.dylib" /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64/libpddokdo.m.d0dfda25.o)
+(printf "\e[0;3%im==> \e[1;39m%s…\e[m\n" 4 "Generating debug symbols for libpddokdo"); set -o pipefail; (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64/libpddokdo.dylib")
+ 
+mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile --no-print-directory --no-keep-going internal-library-compile _THEOS_CURRENT_TYPE="library" THEOS_CURRENT_INSTANCE="libpddokdo" _THEOS_CURRENT_OPERATION="compile" THEOS_BUILD_DIR="." THEOS_CURRENT_ARCH="arm64e"
+ 
+(mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e/)
+(printf "\e[0;3%im==> \e[1;39m%s…\e[m\n" 2 "Compiling libpddokdo.m (arm64e)"); set -o pipefail; (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -x objective-c -c -I/Users/soongyukwon/theos/include -I/Users/soongyukwon/theos/vendor/include -I/Users/soongyukwon/theos/include/_fallback -include /Users/soongyukwon/theos/Prefix.pch -MT /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e/libpddokdo.m.526bf2e3.o -MMD -MP -MF "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e/libpddokdo.m.526bf2e3.Td" -fcolor-diagnostics -DTARGET_IPHONE=1 -O0 -Wall -ggdb -Werror  -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk" -target arm64e-apple-ios15.5   -fobjc-arc -DDEBUG -O0  -DTHEOS_INSTANCE_NAME="\"libpddokdo\"" -fmodules -fcxx-modules -fmodule-name=libpddokdo -fbuild-session-file=/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/build_session -fmodules-prune-after=345600 -fmodules-prune-interval=86400 -fmodules-validate-once-per-build-session  -arch arm64e      libpddokdo.m -o /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e/libpddokdo.m.526bf2e3.o)
+ 
+(mkdir -p /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e)
+ 
+(printf "\e[0;3%im==> \e[1;39m%s…\e[m\n" 3 "Linking library libpddokdo (arm64e)"); set -o pipefail; (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -fcolor-diagnostics -L/Users/soongyukwon/theos/lib -ggdb -L/Users/soongyukwon/theos/vendor/lib -lobjc -framework Foundation -framework CoreFoundation              -dynamiclib -install_name "/usr/lib/libpddokdo.dylib"  -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk" -target arm64e-apple-ios15.5  -multiply_defined suppress -stdlib=libc++ -lc++  -arch arm64e  -O0 -o "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e/libpddokdo.dylib" /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e/libpddokdo.m.526bf2e3.o)
+(printf "\e[0;3%im==> \e[1;39m%s…\e[m\n" 4 "Generating debug symbols for libpddokdo"); set -o pipefail; (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e/libpddokdo.dylib")
+(printf "\e[0;3%im==> \e[1;39m%s…\e[m\n" 4 "Merging library libpddokdo"); set -o pipefail; (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -arch arm64 /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64/libpddokdo.dylib -arch arm64e /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/arm64e/libpddokdo.dylib -create -output "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/libpddokdo.dylib.47ba6b93.unsigned")
+ 
+(printf "\e[0;3%im==> \e[1;39m%s…\e[m\n" 4 "Signing libpddokdo"); set -o pipefail; (CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate  ldid -S "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/libpddokdo.dylib.47ba6b93.unsigned" && mv "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/libpddokdo.dylib.47ba6b93.unsigned" "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/libpddokdo.dylib")
+rm /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/libpddokdo.dylib.47ba6b93.unsigned
+ 
+:
+:
+ 
+make: Leaving directory `/Users/soongyukwon/Documents/Github.nosync/libpddokdo'
+ 
