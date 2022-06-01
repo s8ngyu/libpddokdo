@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Wed Jun  1 00:32:44 2022
+# Make data base, printed on Wed Jun  1 23:09:31 2022
 
 # Variables
 
@@ -18,15 +18,19 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 ?F = $(notdir $?)
 # makefile (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 26)
 THEOS_PACKAGE_ARCH := iphoneos-arm
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 19)
-THEOS_PROJECT_DIR := /Users/soongyukwon/Documents/Github.nosync/libpddokdo
+THEOS_PROJECT_DIR := /Users/soongyukwon/Documents/Github/libpddokdo
 # makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 36)
 PRINT_FORMAT_RED = $(PRINT_FORMAT_STAGE) 1
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 234)
 THEOS_OBJ_DIR = $(_THEOS_LOCAL_DATA_DIR)/$(THEOS_OBJ_DIR_NAME)
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 36)
-__simplify = $(2)$(eval $(1):=$(2))
  
+__simplify = $(2)$(eval $(1):=$(2))
+# makefile (from `/Users/soongyukwon/theos/makefiles/legacy.mk', line 3)
+FW_MAKEDIR = $(THEOS_MAKE_PATH)
 # makefile (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 4)
 _THEOS_PLATFORM_DPKG_DEB = dm.pl
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 188)
@@ -77,6 +81,8 @@ TARGET_AR_EXT := .a
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # makefile (from `/Users/soongyukwon/theos/makefiles/legacy.mk', line 40)
 FW_INSTANCE = $(THEOS_CURRENT_INSTANCE)$(warning FW_INSTANCE is deprecated. Please migrate to THEOS_CURRENT_INSTANCE.)
+# makefile (from `/Users/soongyukwon/theos/makefiles/package.mk', line 99)
+THEOS_DEVICE_IP := 
 # environment
 _ = /usr/bin/make
 # makefile (from `/Users/soongyukwon/theos/makefiles/platform/Darwin.mk', line 39)
@@ -85,8 +91,10 @@ _THEOS_PLATFORM_SHOW_IN_FILE_MANAGER := open -R
 _TARGET_VERSION_GE_12_0 := 
 # makefile (from `/Users/soongyukwon/theos/makefiles/legacy.mk', line 46)
 FW_PACKAGE_DEBVERSION = $(THEOS_PACKAGE_VERSION)$(warning FW_PACKAGE_DEBVERSION is deprecated. Please migrate to THEOS_PACKAGE_VERSION.)
+# makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 7)
+TARGET_CFLAGS_DYNAMICLIB = 
 # makefile (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 12)
-_THEOS_DEB_PACKAGE_CONTROL_PATH := /Users/soongyukwon/Documents/Github.nosync/libpddokdo/control
+_THEOS_DEB_PACKAGE_CONTROL_PATH := /Users/soongyukwon/Documents/Github/libpddokdo/control
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 91)
 _THEOS_ON_SCHEMA := DEFAULT  DEBUG
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_tail.mk', line 62)
@@ -125,6 +133,7 @@ THEOS_FALLBACK_INCLUDE_PATH := /Users/soongyukwon/theos/include/_fallback
 PRINT_FORMAT_STAGE = printf "\e[0;3%im==> \e[1;39m%s…\e[m\n"
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 88)
 DEBUG := 1
+ 
 # makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 89)
 ERROR_END = $(NULLSTRING) >&2; exit 1;
 # `override' directive (from `/Users/soongyukwon/theos/makefiles/common.mk', line 95)
@@ -132,7 +141,6 @@ _THEOS_CLEANED_SCHEMA_SET := debug
 # makefile (from `/Users/soongyukwon/theos/makefiles/package.mk', line 105)
 _THEOS_SUDO_COMMAND = 
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 62)
- 
 THEOS_LIBRARY_PATH := /Users/soongyukwon/theos/lib
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 115)
 THEOS_LAYOUT_DIR = $(THEOS_PROJECT_DIR)/$(THEOS_LAYOUT_DIR_NAME)
@@ -169,7 +177,7 @@ _THEOS_TARGET_PLATFORM_SDK_NAME := iPhoneOS
 # makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 83)
 ECHO_PRE_UNLOADING = $(ECHO_BEGIN)$(PRINT_FORMAT_CYAN) "Unloading $(PREINSTALL_TARGET_PROCESSES)"$(ECHO_END); $(ECHO_PIPEFAIL) (
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/s3/76jh_p892yg7vr351_hnyvsc0000gn/T/vscode-ipc-f74b5707-2ee5-4bbe-b077-9bc1277ea56e.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/s3/76jh_p892yg7vr351_hnyvsc0000gn/T/vscode-ipc-6b5b6c00-a1f2-456b-a87f-c094d06a86e2.sock
 # makefile (from `/Users/soongyukwon/theos/makefiles/stage.mk', line 2)
 _THEOS_STAGING_RULES_LOADED := 1
 # makefile (from `/Users/soongyukwon/theos/makefiles/package.mk', line 99)
@@ -177,7 +185,7 @@ THEOS_DEVICE_PORT :=
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 65)
 TARGET_LD = $(call __invocation,$(_THEOS_TARGET_CXX))
 # environment
-VSCODE_CWD = /
+VSCODE_CWD = /Users/soongyukwon/Documents/Github.nosync/libpddokdo
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/Darwin/iphone.mk', line 5)
 _THEOS_TARGET_PLATFORM_NAME := iphoneos
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 273)
@@ -189,7 +197,9 @@ THEOS_RSYNC_EXCLUDES = _MTN .git .svn .DS_Store ._*
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_tail.mk', line 38)
 _THEOS_TARGET_SWIFTFLAGS := -sdk "/Users/soongyukwon/theos/sdks/iPhoneOS11.4.sdk" 
 # makefile (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 27)
-THEOS_PACKAGE_BASE_VERSION := 1.3.3
+THEOS_PACKAGE_BASE_VERSION := 1.3.4
+# makefile (from `/Users/soongyukwon/theos/makefiles/legacy.mk', line 43)
+FW_PACKAGE_NAME = $(THEOS_PACKAGE_NAME)$(warning FW_PACKAGE_NAME is deprecated. Please migrate to THEOS_PACKAGE_NAME.)
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 120)
 _THEOS_LOAD_MODULES := 
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 72)
@@ -248,6 +258,9 @@ THEOS_PLATFORM_NAME := macosx
 FRAMEWORKDIR = $(THEOS)
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 63)
 THEOS_VENDOR_LIBRARY_PATH := /Users/soongyukwon/theos/vendor/lib
+ 
+# makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 73)
+ECHO_STRIPPING = $(ECHO_BEGIN)$(PRINT_FORMAT_BLUE) "Stripping $(THEOS_CURRENT_INSTANCE)"$(ECHO_END); $(ECHO_PIPEFAIL) (
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 66)
 TARGET_SWIFT = $(call __invocation,$(_THEOS_TARGET_SWIFT))
 # makefile (from `Makefile', line 8)
@@ -256,7 +269,6 @@ libpddokdo_CFLAGS = -fobjc-arc
 _THEOS_ABSOLUTE_BUILD_DIR = .
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 119)
 _THEOS_TARGET_OS_DEPLOYMENT_VERSION = $(or $(__THEOS_TARGET_ARG_$(word 2,$(_THEOS_TARGET_ARG_ORDER))),$(TARGET_OS_DEPLOYMENT_VERSION_$(THEOS_CURRENT_ARCH)),$(TARGET_OS_DEPLOYMENT_VERSION),$(_SDKVERSION),$(_THEOS_TARGET_DEFAULT_OS_DEPLOYMENT_VERSION))
- 
 # makefile (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 15)
 _THEOS_PACKAGE_EXTRA_VERSION_PREFIX := +
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 78)
@@ -288,7 +300,7 @@ TARGET_DSYMUTIL = $(call __invocation,dsymutil)
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 248)
 THEOS_SUBPROJECT_PRODUCT = subproject.a
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_tail.mk', line 22)
-MODULESFLAGS := -fmodules -fcxx-modules -fmodule-name= -fbuild-session-file=/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/build_session -fmodules-prune-after=345600 -fmodules-prune-interval=86400 -fmodules-validate-once-per-build-session
+MODULESFLAGS := -fmodules -fcxx-modules -fmodule-name= -fbuild-session-file=/Users/soongyukwon/Documents/Github/libpddokdo/.theos/build_session -fmodules-prune-after=345600 -fmodules-prune-interval=86400 -fmodules-validate-once-per-build-session
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/iphone.mk', line 77)
 __CMP_RES := gt
 # makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 58)
@@ -338,7 +350,7 @@ libpddokdo_FILES = libpddokdo.m
 # makefile (from `/Users/soongyukwon/theos/makefiles/legacy.mk', line 48)
 FW_PACKAGE_STAGING_DIR = $(THEOS_STAGING_DIR)$(warning FW_PACKAGE_STAGING_DIR is deprecated. Please migrate to THEOS_STAGING_DIR.)
 # environment
-PWD = /Users/soongyukwon/Documents/Github.nosync/libpddokdo
+PWD = /Users/soongyukwon/Documents/Github/libpddokdo
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/iphone.mk', line 78)
 _THEOS_DARWIN_CAN_USE_MODULES := 1
 # makefile (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 5)
@@ -367,6 +379,7 @@ _THEOS_TARGET_LDFLAGS := -isysroot "/Users/soongyukwon/theos/sdks/iPhoneOS11.4.s
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # makefile (from `/Users/soongyukwon/theos/makefiles/package.mk', line 41)
 __USERVER_FOR_BUILDNUM := 
+ 
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/iphone.mk', line 10)
 _TARGET_VERSION_GE_3_0 = $(call __simplify,_TARGET_VERSION_GE_3_0,$(call __vercmp,$(_THEOS_TARGET_SDK_VERSION),ge,3.0))
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 47)
@@ -382,8 +395,9 @@ __CMP_NUM1 := 3
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
- 
 HOME = /Users/soongyukwon
+# makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 72)
+TARGET_XCPRETTY = $(call __invocation,xcpretty)
 # makefile (from `/Users/soongyukwon/theos/makefiles/vercmp.mk', line 84)
 ___vercmp_expand_backward = $(if $(filter $(words $(2)),$(words $(3))),, $(if $(filter $(words $(3)),$(firstword $(sort $(words $(2)) $(words $(3))))),, $(eval $(1) := 0 $(1)) $(call ___vercmp_expand_backward,$(1),$(value $(1)),$(3)) ) )
 # makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 25)
@@ -398,6 +412,8 @@ _THEOS_INTERNAL_TRUE_PATH := /Users/soongyukwon/theos
 _THEOS_PACKAGE_LAST_FILENAME = $(call __simplify,_THEOS_PACKAGE_LAST_FILENAME,$(shell cat "$(_THEOS_LOCAL_DATA_DIR)/last_package" 2>/dev/null))
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CLI = 1
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 275)
 THEOS_LINKAGE_TYPE = dynamic
 # environment
@@ -409,7 +425,7 @@ LOGNAME = soongyukwon
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/iphone.mk', line 23)
 _TARGET_VERSION_GE_10_0 := 
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 255)
 _THEOS_MAKEFLAGS := --no-keep-going COLOR=1 --no-print-directory
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 244)
@@ -454,18 +470,21 @@ _THEOS_INTERNAL_SWIFTFLAGS = -DTHEOS_SWIFT -DTARGET_$(_THEOS_TARGET_NAME_DEFINE)
 _THEOS_TARGET_ARG_ORDER := 2 3
 # environment
 XPC_FLAGS = 0x0
+# environment
+COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
-# default
-MAKECMDGOALS := all
+# environment
+LC_TERMINAL = iTerm2
 # makefile (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 47)
 _THEOS_DEB_LIBSWIFT_DEPENDS := org.swift.libswift (>= 5.0)
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 231)
 THEOS_OBJ_DIR_NAME = obj$(_THEOS_OBJ_DIR_EXTENSION)
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 61)
+ 
 THEOS_BIN_PATH := /Users/soongyukwon/theos/bin
 # environment
-SHLVL = 1
+SHLVL = 3
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 93)
 _UNSORTED_SDKS := 10.3 11.4 12.4 13.7 14.5 9.3  15.5
 # makefile (from `/Users/soongyukwon/theos/makefiles/platform/Darwin.mk', line 29)
@@ -497,10 +516,10 @@ _THEOS_TARGET_DEFAULT_OS_DEPLOYMENT_VERSION := 5.0
 TARGET_EXE_EXT := 
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `/Users/soongyukwon/theos/makefiles/legacy.mk', line 43)
-FW_PACKAGE_NAME = $(THEOS_PACKAGE_NAME)$(warning FW_PACKAGE_NAME is deprecated. Please migrate to THEOS_PACKAGE_NAME.)
-# makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 73)
-ECHO_STRIPPING = $(ECHO_BEGIN)$(PRINT_FORMAT_BLUE) "Stripping $(THEOS_CURRENT_INSTANCE)"$(ECHO_END); $(ECHO_PIPEFAIL) (
+# default
+MAKECMDGOALS := all
+# environment
+TERM_SESSION_ID = w0t0p0:88E9E0CC-F4B7-4AB7-BA0B-A3E0E98F87A7
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 140)
 __THEOS_TARGET_ARG_0 := iphone
 # makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 26)
@@ -523,7 +542,6 @@ _TARGET_VERSION_GE_6_0 := 1
 _THEOS_PLATFORM_CALCULATED := 1
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
- 
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/iphone.mk', line 39)
 _DEPLOY_VERSION_LT_4_3 := 
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 203)
@@ -534,8 +552,8 @@ ECHO_INSTALLING = $(ECHO_BEGIN)$(PRINT_FORMAT_CYAN) "Installing"$(ECHO_END); $(E
 _THEOS_FALSE := 
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 92)
 _XCODE_SDK_DIR := /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs
-# makefile (from `/Users/soongyukwon/theos/makefiles/legacy.mk', line 3)
-FW_MAKEDIR = $(THEOS_MAKE_PATH)
+# environment
+TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
 # environment
@@ -564,8 +582,8 @@ FW_BUILD_DIR = $(THEOS_BUILD_DIR)$(warning FW_BUILD_DIR is deprecated. Please mi
 MFLAGS = -S --no-print-directory -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 140)
-__THEOS_TARGET_ARG_1 := clang
+# environment
+TERM_PROGRAM_VERSION = 3.4.15
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_tail.mk', line 18)
 TARGET_PRIVATE_FRAMEWORK_INCLUDE_PATH = $(ISYSROOT)/System/Library/PrivateFrameworks
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/iphone.mk', line 47)
@@ -575,7 +593,9 @@ _THEOS_PACKAGE_FORMAT := deb
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 127)
 uname_o := 
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.21933469.21933475
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.21933469.21933475.095F6D6A-6287-4A84-A031-39132163FD16
+# environment
+LC_TERMINAL_VERSION = 3.4.15
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -585,7 +605,7 @@ THEOS_PACKAGE_NAME := com.peterdev.libpddokdo
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 105)
 _SORTED_SDKS = $(call __simplify,_SORTED_SDKS,$(shell echo $(_UNSORTED_SDKS) | tr ' ' $$'\n' | sort -t. -k 1,1n -k 2,2n))
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 22)
-_THEOS_LOCAL_DATA_DIR := /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos
+_THEOS_LOCAL_DATA_DIR := /Users/soongyukwon/Documents/Github/libpddokdo/.theos
 # makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 91)
 WARNING_EMPTY_LINKING = @$(PRINT_FORMAT_WARNING) "No files to link. Please check your Makefile! Make sure you set $(THEOS_CURRENT_INSTANCE)_FILES (or similar variables)"
 # makefile (from `/Users/soongyukwon/theos/makefiles/package.mk', line 42)
@@ -599,15 +619,18 @@ _THEOS_CURRENT_TYPE :=
 # makefile (from `/Users/soongyukwon/theos/makefiles/target.mk', line 39)
 __eval_target = $(eval $(call ___get_target_args,$(3)) $(call ___get_target_args,$(2)) $(call ___get_target_args,$(1)) )
 # makefile (from `/Users/soongyukwon/theos/makefiles/vercmp.mk', line 52)
+ 
 ___vercmp_presplit = $(strip $(foreach ver1,$(value $(1)),$(if $(filter eq,$(value $(3))), $(eval $(3):=$(call __cmp,$(ver1),$(firstword $(value $(2)))$(eval $(2):=$(wordlist 2,$(words $(value $(2))),$(value $(2)))))) ,)) $(value $(3)) )
-# makefile (from `/Users/soongyukwon/theos/makefiles/package.mk', line 99)
-THEOS_DEVICE_IP := 
+# environment
+ITERM_SESSION_ID = w0t0p0:88E9E0CC-F4B7-4AB7-BA0B-A3E0E98F87A7
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 264)
-FAKEROOT := /Users/soongyukwon/theos/bin/fakeroot.sh -p "/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/fakeroot"
+FAKEROOT := /Users/soongyukwon/theos/bin/fakeroot.sh -p "/Users/soongyukwon/Documents/Github/libpddokdo/.theos/fakeroot"
 # environment
 HOMEBREW_REPOSITORY = /opt/homebrew
-# makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 7)
-TARGET_CFLAGS_DYNAMICLIB = 
+# makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 140)
+__THEOS_TARGET_ARG_1 := clang
+# environment
+COLORFGBG = 15;0
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 159)
 _THEOS_TARGET_NAME_DEFINE := IPHONE
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_tail.mk', line 17)
@@ -630,8 +653,8 @@ _THEOS_INTERNAL_IFLAGS_C = $(_THEOS_INTERNAL_IFLAGS_BASE) -include $(THEOS)/Pref
 <F = $(notdir $<)
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 21)
 _THEOS_TARGET_DEFAULT_PACKAGE_FORMAT = deb
-# makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 72)
-TARGET_XCPRETTY = $(call __invocation,xcpretty)
+# environment
+ITERM_PROFILE = Default
 # makefile (from `/Users/soongyukwon/theos/makefiles/platform/Darwin.mk', line 20)
 DEVELOPER_DIR = $(THEOS_PLATFORM_SDK_ROOT)
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 262)
@@ -655,7 +678,6 @@ _THEOS_OBJ_DIR_EXTENSION = /$(_THEOS_CLEANED_SCHEMA_SET)
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_tail.mk', line 11)
 SYSROOT := /Users/soongyukwon/theos/sdks/iPhoneOS11.4.sdk
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 223)
- 
 THEOS_BUILD_DIR = .
 # makefile (from `/Users/soongyukwon/theos/makefiles/package.mk', line 98)
 THEOS_DEVICE_USER = root
@@ -704,7 +726,6 @@ VERSION.EXTRAVERSION = $(if $(PACKAGE_BUILDNAME),+$(PACKAGE_BUILDNAME))
 # makefile (from `/Users/soongyukwon/theos/makefiles/package.mk', line 2)
 _THEOS_PACKAGE_RULES_LOADED := 1
 # automatic
- 
 ^F = $(notdir $^)
 # `override' directive (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 115)
 _THEOS_TARGET_INCLUDE_SDK_VERSION := 11.4
@@ -732,6 +753,7 @@ VERCMP_FIRST := 3 81
 uname_s := Darwin
 # makefile (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 44)
 _THEOS_DEB_LIBSWIFT_PACKAGE_VERSION := 5.0
+ 
 # makefile (from `/Users/soongyukwon/theos/makefiles/messages.mk', line 69)
 ECHO_SWIFTMODULE_HEADER = $(ECHO_BEGIN)$(PRINT_FORMAT_BLUE) "Generating $(notdir $@)"$(ECHO_END); $(ECHO_PIPEFAIL) (
 # makefile (from `/Users/soongyukwon/theos/makefiles/common.mk', line 191)
@@ -778,6 +800,8 @@ _THEOS_TARGET_SWIFT_TARGET := apple-ios11.4
 FW_PACKAGE_VERSION = $(THEOS_PACKAGE_BASE_VERSION)$(warning FW_PACKAGE_VERSION is deprecated. Please migrate to THEOS_PACKAGE_BASE_VERSION.)
 # environment
 LANG = C
+# environment
+TERM = xterm-256color
 # makefile (from `/Users/soongyukwon/theos/makefiles/vercmp.mk', line 1)
 empty := 
 # makefile (from `/Users/soongyukwon/theos/makefiles/platform/Darwin.mk', line 23)
@@ -791,26 +815,25 @@ VSCODE_PID = 2633
 # makefile (from `/Users/soongyukwon/theos/makefiles/targets/_common/darwin_head.mk', line 106)
 _LATEST_SDK = $(call __simplify,_LATEST_SDK,$(lastword $(_SORTED_SDKS)))
 # variable set hash-table stats:
-# Load=384/1024=38%, Rehash=0, Collisions=313/1938=16%
+# Load=396/1024=39%, Rehash=0, Collisions=337/1950=17%
 
 # Pattern-specific Variable Values
 
- 
 %.variables :
 # makefile (from `/Users/soongyukwon/theos/makefiles/master/rules.mk', line 112)
-# _INSTANCE += $(basename $(basename $*))
+# _INSTANCE := $$(basename $$(basename $$*))
 
 %.variables :
 # makefile (from `/Users/soongyukwon/theos/makefiles/master/rules.mk', line 113)
-# _OPERATION += $(subst .,,$(suffix $(basename $*)))
+# _OPERATION := $$(subst .,,$$(suffix $$(basename $$*)))
 
 %.variables :
 # makefile (from `/Users/soongyukwon/theos/makefiles/master/rules.mk', line 114)
-# _TYPE += $(subst -,_,$(subst .,,$(suffix $*)))
+# _TYPE := $$(subst -,_,$$(subst .,,$$(suffix $$*)))
 
 %.variables :
 # makefile (from `/Users/soongyukwon/theos/makefiles/master/rules.mk', line 115)
-# __SUBPROJECTS += $(strip $(call __schema_var_all,$(_INSTANCE)_,SUBPROJECTS))
+# __SUBPROJECTS := $$(strip $$(call __schema_var_all,$$(_INSTANCE)_,SUBPROJECTS))
 
 %.subprojects :
 # makefile (from `/Users/soongyukwon/theos/makefiles/master/rules.mk', line 144)
@@ -832,11 +855,12 @@ _LATEST_SDK = $(call __simplify,_LATEST_SDK,$(lastword $(_SORTED_SDKS)))
 # Directories
 
 # . (device 16777229, inode 21564215): 15 files, no impossibilities.
-# /Users/soongyukwon/Documents/Github.nosync/libpddokdo (device 16777229, inode 21564215): 15 files, no impossibilities.
+# /Users/soongyukwon/Documents/Github/libpddokdo (device 16777229, inode 21564215): 15 files, no impossibilities.
 # /Users/soongyukwon/theos/lib (device 16777229, inode 3746399): 6 files, no impossibilities.
 # /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs (device 16777229, inode 23003926): 4 files, no impossibilities.
 # /Users/soongyukwon (device 16777229, inode 35016): 53 files, no impossibilities.
-# /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos (device 16777229, inode 21575928): 8 files, no impossibilities so far.
+ 
+# /Users/soongyukwon/Documents/Github/libpddokdo/.theos (device 16777229, inode 21575928): 8 files, no impossibilities so far.
 # /Users/soongyukwon/theos/vendor/lib (device 16777229, inode 3746508): 22 files, no impossibilities so far.
 # /Users/soongyukwon/theos/include (device 16777229, inode 3746397): 8 files, no impossibilities.
 # /Users/soongyukwon/theos/vendor/include (device 16777229, inode 3746507): 96 files, no impossibilities so far.
@@ -924,7 +948,7 @@ _LATEST_SDK = $(call __simplify,_LATEST_SDK,$(lastword $(_SORTED_SDKS)))
 	$(THEOS_BIN_PATH)/logos.pl $(ALL_LOGOSFLAGS) $< > $@
 	
 
-/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/%/.stamp: /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug
+/Users/soongyukwon/Documents/Github/libpddokdo/.theos/obj/debug/%/.stamp: /Users/soongyukwon/Documents/Github/libpddokdo/.theos/obj/debug
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 43):
 	@mkdir -p $(dir $@); touch $@
 	
@@ -961,13 +985,21 @@ _LATEST_SDK = $(call __simplify,_LATEST_SDK,$(lastword $(_SORTED_SDKS)))
 
 # Files
 
+/Users/soongyukwon/Documents/Github/libpddokdo/.theos/obj/debug:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 37):
+	@mkdir -p $@
+	
+
 before-package:: packages
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
-before-package:: /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/_/DEBIAN/control
+before-package:: /Users/soongyukwon/Documents/Github/libpddokdo/.theos/_/DEBIAN/control
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -985,6 +1017,7 @@ after-uninstall:: internal-after-uninstall
 #  File has not been updated.
 
 after-clean-packages::
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -1021,7 +1054,6 @@ all::
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/3=0%
 
 all::
@@ -1053,7 +1085,7 @@ all::
 	@$(PRINT_FORMAT) "Build may be slow as Theos isn’t using all available CPU cores on this computer. Consider upgrading GNU Make: https://theos.dev/docs/parallel-building"
 	
 
-all:: /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/build_session before-all internal-all after-all
+all:: /Users/soongyukwon/Documents/Github/libpddokdo/.theos/build_session before-all internal-all after-all
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -1099,14 +1131,6 @@ update-theos::
 	$(ECHO_NOTHING)$(THEOS_BIN_PATH)/update-theos$(ECHO_END)
 	
 
-/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/_/DEBIAN:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 30):
-	$(ECHO_NOTHING)mkdir -p "$(THEOS_STAGING_DIR)/DEBIAN"$(ECHO_END)
-	
-
 troubleshoot::
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -1132,6 +1156,7 @@ troubleshoot::
 internal-all::
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 
@@ -1160,7 +1185,6 @@ after-install:: internal-after-install
 #  File has not been updated.
 
 after-install::
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -1226,6 +1250,14 @@ internal-after-install::
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 47):
 	
 
+/Users/soongyukwon/Documents/Github/libpddokdo/.theos/build_session:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/soongyukwon/theos/makefiles/master/rules.mk', line 104):
+	@mkdir -p $(_THEOS_LOCAL_DATA_DIR)
+	
+
 /Users/soongyukwon/theos/makefiles/legacy.mk:
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `legacy'
@@ -1242,14 +1274,6 @@ internal-after-install::
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 37):
-	@mkdir -p $@
-	
 
 uninstall:: before-uninstall internal-uninstall after-uninstall
 #  Implicit rule search has not been done.
@@ -1306,6 +1330,7 @@ after-package::
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 47):
 	
 
+ 
 internal-clean-packages::
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -1343,7 +1368,6 @@ internal-install::
 internal-install::
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/package.mk', line 118):
 	@:
@@ -1374,6 +1398,16 @@ stage:: all before-stage internal-stage after-stage
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 47):
 	
 
+/Users/soongyukwon/Documents/Github/libpddokdo/.theos/_/DEBIAN/control: /Users/soongyukwon/Documents/Github/libpddokdo/.theos/_/DEBIAN
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 50):
+	$(ECHO_NOTHING)sed -e 's/\$${LIBSWIFT}/$(_THEOS_DEB_LIBSWIFT_DEPENDS)/g; s/\$${LIBSWIFT_VERSION}/$(_THEOS_DEB_LIBSWIFT_PACKAGE_VERSION)/g; /^[Vv]ersion:/d; /^$$/d; $$a\' "$(_THEOS_DEB_PACKAGE_CONTROL_PATH)" > "$@"$(ECHO_END)
+	$(ECHO_NOTHING)echo "Version: $(_THEOS_INTERNAL_PACKAGE_VERSION)" >> "$@"$(ECHO_END)
+	$(ECHO_NOTHING)echo "Installed-Size: $(shell du $(_THEOS_PLATFORM_DU_EXCLUDE) DEBIAN -ks "$(THEOS_STAGING_DIR)" | cut -f 1)" >> "$@"$(ECHO_END)
+	
+
 after-stage::
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -1392,6 +1426,14 @@ after-stage::
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 47):
+	
+
+/Users/soongyukwon/Documents/Github/libpddokdo/.theos/obj/debug/.stamp: /Users/soongyukwon/Documents/Github/libpddokdo/.theos/obj/debug
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 40):
+	@mkdir -p $(dir $@); touch $@
 	
 
 before-all::
@@ -1476,6 +1518,7 @@ libpddokdo:
 internal-package::
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 
@@ -1511,21 +1554,10 @@ clean:: before-clean internal-clean after-clean
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 47):
 	
 
-/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/_/DEBIAN/control: /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/_/DEBIAN
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 50):
-	$(ECHO_NOTHING)sed -e 's/\$${LIBSWIFT}/$(_THEOS_DEB_LIBSWIFT_DEPENDS)/g; s/\$${LIBSWIFT_VERSION}/$(_THEOS_DEB_LIBSWIFT_PACKAGE_VERSION)/g; /^[Vv]ersion:/d; /^$$/d; $$a\' "$(_THEOS_DEB_PACKAGE_CONTROL_PATH)" > "$@"$(ECHO_END)
-	$(ECHO_NOTHING)echo "Version: $(_THEOS_INTERNAL_PACKAGE_VERSION)" >> "$@"$(ECHO_END)
-	$(ECHO_NOTHING)echo "Installed-Size: $(shell du $(_THEOS_PLATFORM_DU_EXCLUDE) DEBIAN -ks "$(THEOS_STAGING_DIR)" | cut -f 1)" >> "$@"$(ECHO_END)
-	
-
 /Users/soongyukwon/theos/makefiles/install/deb_remote.mk:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `install/deb_remote'
- 
 #  Last modified 2022-03-17 22:20:30
 #  File has been updated.
 #  Successfully updated.
@@ -1552,14 +1584,6 @@ show:: internal-install-check
 #  File has not been updated.
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/package.mk', line 155):
 	$(ECHO_NOTHING)$(_THEOS_PLATFORM_SHOW_IN_FILE_MANAGER) "$(shell cat "$(_THEOS_LOCAL_DATA_DIR)/last_package")"$(ECHO_END)
-	
-
-/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug/.stamp: /Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/obj/debug
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 40):
-	@mkdir -p $(dir $@); touch $@
 	
 
 before-uninstall::
@@ -1621,14 +1645,6 @@ internal-package-check::
 #  commands to execute (from `/Users/soongyukwon/theos/makefiles/rules.mk', line 47):
 	
 
-/Users/soongyukwon/Documents/Github.nosync/libpddokdo/.theos/build_session:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `/Users/soongyukwon/theos/makefiles/master/rules.mk', line 104):
-	@mkdir -p $(_THEOS_LOCAL_DATA_DIR)
-	
-
 before-install::
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -1642,6 +1658,14 @@ after-all::
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+
+/Users/soongyukwon/Documents/Github/libpddokdo/.theos/_/DEBIAN:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/soongyukwon/theos/makefiles/package/deb.mk', line 30):
+	$(ECHO_NOTHING)mkdir -p "$(THEOS_STAGING_DIR)/DEBIAN"$(ECHO_END)
+	
 
 /Users/soongyukwon/theos/makefiles/master/library.mk:
 #  Implicit rule search has been done.
@@ -1663,6 +1687,7 @@ internal-clean::
 	$(ECHO_CLEANING)rm -rf "$(subst $(_THEOS_OBJ_DIR_EXTENSION),,$(THEOS_OBJ_DIR))"$(ECHO_END)
 	$(ECHO_NOTHING)rm "$(_THEOS_BUILD_SESSION_FILE)"$(ECHO_END)
 	$(ECHO_NOTHING)touch "$(_THEOS_BUILD_SESSION_FILE)"$(ECHO_END)
+ 
 	$(ECHO_NOTHING)rm -rf "$(THEOS_STAGING_DIR)"$(ECHO_END)
 	
 
@@ -1672,7 +1697,7 @@ install:: before-install internal-install after-install
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=13/248=5%
+# Load=72/1024=7%, Rehash=0, Collisions=15/248=6%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -1684,6 +1709,6 @@ install:: before-install internal-install after-install
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 3109 / max = 3109 / min = 3109 / avg = 3109
 
-# Finished Make data base on Wed Jun  1 00:32:44 2022
+# Finished Make data base on Wed Jun  1 23:09:32 2022
 
  
